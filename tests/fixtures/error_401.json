@@ -1,0 +1,6 @@
+{
+  "error": {
+    "code": "401",
+    "message": "The provided credentials are not valid"
+  }
+}

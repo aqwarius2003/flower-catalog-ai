@@ -1,0 +1,55 @@
+[project]
+name = "flower-catalog-ai"
+version = "2.0.0"
+description = "Automated SEO demand intelligence, semantic clustering, and e-commerce catalog generation pipeline"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "camoufox>=0.5.6",
+    "curl-cffi>=0.16.3",
+    "google-genai>=2.25.0",
+    "httpx>=0.28.1",
+    "mcp>=2.2.0",
+    "numpy>=2.5.3",
+    "onnxruntime-gpu>=1.30.0",
+    "patchright>=1.63.0",
+    "pillow>=12.3.0",
+    "pydantic>=2.13.5",
+    "rembg[gpu]>=2.0.85",
+    "requests>=2.34.2",
+    "scrapling[all]>=0.4.15",
+    "streamlit>=1.64.0",
+]
+
+[project.scripts]
+flower-catalog = "src.main:main"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.3.1",
+    "pytest>=9.1.1",
+    "ruff>=0.16.9",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = [
+    ".venv",
+    "scratch",
+    "old",
+    "agents-bootstrap",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = [
+    "E501",
+    "B008",
+    "B904",
+]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+check_untyped_defs = true

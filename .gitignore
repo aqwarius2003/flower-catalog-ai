@@ -1,0 +1,81 @@
+# Environments & Secrets (CRITICAL)
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Python artifacts & caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# Quality & Test Tooling Caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+.hypothesis/
+
+# Application Data, Databases & Local Outputs
+data/*.db
+data/*.sqlite*
+data/*.csv
+*.db
+*.sqlite3
+output/*
+!output/.gitkeep
+data/*
+!data/.gitkeep
+
+# Internal drafts, scratches, test tasks and raw data
+scratch/
+old/
+agents-bootstrap/
+zadanie.txt
+RECOMMENDATIONS.md
+SPEC_v2-0.md
+V1.html
+*.csv
+!tests/fixtures/*.csv
+
+# Agent/IDE local configs & internal harnesses
+.agent/
+.agents/
+AGENTS.md
+scripts/
+.claude/
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+desktop.ini
